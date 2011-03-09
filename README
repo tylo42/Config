@@ -1,0 +1,8 @@
+Author: Tyler Hyndman
+Email: tyler.hyndman@gmail.com
+Description:
+This repository is primarily used for me to organize config files
+over multiple computers.  Feel free to use them however you like.
+
+WARNING: install.sh will overwright any configuration files in your
+home directory.
