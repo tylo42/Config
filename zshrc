@@ -15,5 +15,7 @@ compinit
 export PROMPT="%n@%m%%>"
 export RPROMPT="%~%"
 
+export GIT_EDITOR=vim
+
 alias ls='ls --color=always --group-directories-first --width=80 -X'
 alias grep='grep --color'
