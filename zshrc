@@ -19,3 +19,6 @@ export GIT_EDITOR=vim
 
 alias ls='ls --color=always --group-directories-first --width=80 -X'
 alias grep='grep --color'
+
+alias gdc='gdc -Wall'
+alias g++='g++ -Wall'
