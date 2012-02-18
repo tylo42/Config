@@ -115,6 +115,8 @@ ${color grey}ESSID: $color$alignr${wireless_essid wlan0}
 ${color grey}Up:$color ${upspeed wlan0} k/s $alignr${color grey} Down:$color ${downspeed wlan0} k/s
 ${upspeedgraph wlan0 15,107} $alignr${downspeedgraph wlan0 15,107}
 
+${color grey}DropBox: $color$alignr${exec dropbox status}
+
 #WEATHER ${hr 1}
 
 #${execi 300 /home/tylo42/.conky/accu-weather.sh 63108}
