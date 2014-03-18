@@ -57,6 +57,10 @@ set number
 set expandtab
 set tabstop=3
 set shiftwidth=3
+set nowrap
+set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
+set hlsearch
+set scrolloff=5
 
 colorscheme desert
 
@@ -78,3 +82,19 @@ imap     <silent> <C-Up>   <C-O><C-Up>
 imap     <silent> <C-Down> <C-O><C-Down>
 smap     <silent> <C-Up>   <C-G><C-Up><C-G>
 smap     <silent> <C-Down> <C-G><C-Down><C-G>
+vnoremap <silent> <Leader>is :<C-U>let old_reg_a=@a<CR>
+ \:let old_reg=@"<CR>
+ \gv"ay
+ \:let @a=substitute(@a, '.\(.*\)\@=',
+ \ '\=@a[strlen(submatch(1))]', 'g')<CR>
+ \gvc<C-R>a<Esc>
+ \:let @a=old_reg_a<CR>
+ \:let @"=old_reg<CR>
+
+" Window navigation
+nmap <silent> <A-Up> :wincmd k<CR>
+nmap <silent> <A-Down> :wincmd j<CR>
+nmap <silent> <A-Left> :wincmd h<CR>
+nmap <silent> <A-Right> :wincmd l<CR>
+
+execute pathogen#infect()
